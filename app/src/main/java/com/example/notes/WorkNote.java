@@ -30,6 +30,7 @@ public class WorkNote {
         for (int i = 0; i < ar.size(); i++){
             Note note = (Note)ar.get(i);
             if (choice.equals("Всё") || note.getCategories().equals(choice)) {
+                note.setNumber(count);
                 array.add(note);
                 count++;
             }
@@ -53,7 +54,7 @@ public class WorkNote {
 
     //Привязка перехода на следующую страницу
     private void MakeSwitch(){
-        for (int i = 0; i < Note.getAll().size(); i++){
+        for (int i = 0; i < arrayId.size(); i++){
             Button but = (Button)layout.findViewById(arrayId.get(i));
             but.setOnClickListener(new View.OnClickListener() {
                 @Override

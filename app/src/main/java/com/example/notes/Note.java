@@ -55,6 +55,10 @@ public class Note {
         return super.clone();
     }
 
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
     public int getNumber() {
         return number;
     }
